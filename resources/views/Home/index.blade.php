@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 
-@section('title','Home - AgriCulture')
+@section('title','Home - Organic Farmiz')
 
 
 @section('content')
@@ -82,7 +82,7 @@
 
     <!-- Slide 1 -->
     <div class="carousel-item active">
-      <img src="assets/img/slider-bg-1.jpg" alt="">
+      <img src="assets/img/can-bg-1.png" alt="">
       <div class="carousel-container">
         <h2>Farming is the best solution of worlds starvation</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -97,7 +97,7 @@
 
     <!-- Slide 2 -->
     <div class="carousel-item">
-      <img src="assets/img/slider-bg-2.jpg" alt="">
+      <img src="assets/img/can-bg-2.png" alt="">
       <div class="carousel-container">
         <h2>Organic vegetables is good for health</h2>
         <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</p>
@@ -111,7 +111,7 @@
 
     <!-- Slide 3 -->
     <div class="carousel-item">
-      <img src="assets/img/slider-bg-3.jpg" alt="">
+      <img src="assets/img/can-bg-3.png" alt="">
       <div class="carousel-container">
         <h2>Providing Fresh Produce Every Single Day</h2>
         <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
@@ -123,12 +123,12 @@
       </div>
     </div>
 
-    <!-- Slide 4 -->
+     <!-- Slide 4 -->
     <div class="carousel-item">
-      <img src="assets/img/slider-bg-4.png" alt="">
+      <img src="assets/img/can-bg-4.jpg" alt="">
       <div class="carousel-container">
-        <h2>Farming as a Passione</h2>
-        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+        <h2>Providing Fresh Produce Every Single Day</h2>
+        <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
 
         <div class="hero-btn-group mt-3">
           <a href="#products" class="btn btn-success px-4 py-2 me-2">View Products</a>
@@ -137,19 +137,6 @@
       </div>
     </div>
 
-    <!-- Slide 5 -->
-    <div class="carousel-item">
-      <img src="assets/img/slider-bg-5.png" alt="">
-      <div class="carousel-container">
-        <h2>Good Food For All</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-        <div class="hero-btn-group mt-3">
-          <a href="#products" class="btn btn-success px-4 py-2 me-2">View Products</a>
-          <a href="#contact" class="btn btn-outline-light px-4 py-2">Contact Us</a>
-        </div>
-      </div>
-    </div>
 
     <!-- Controls -->
     <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">

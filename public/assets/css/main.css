@@ -10,47 +10,47 @@
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
-/* Fonts */
+/* Fonts - Cannabis Farming Theme */
 :root {
-  --default-font: "Open Sans",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Marcellus",  sans-serif;
-  --nav-font: "Marcellus",  sans-serif;
+  --default-font: "Inter", "Roboto", system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --heading-font: "Montserrat", "Poppins", sans-serif;
+  --nav-font: "Montserrat", sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+/* Global Colors - Cannabis Farming Theme with Darker Text */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #2d465e; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #116530; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --background-color: #f8faf7; /* Soft off-white with subtle green tint */
+  --default-color: #1a241b; /* Much darker forest green for maximum readability */
+  --heading-color: #0d2818; /* Very dark green, almost black for strong headings */
+  --accent-color: #4a9d5f; /* Vibrant cannabis leaf green for CTAs */
+  --surface-color: #ffffff; /* Clean white for card backgrounds */
+  --contrast-color: #ffffff; /* White text on colored backgrounds */
 }
 
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
-:root {
-  --nav-color: #212529;  /* The default color of the main navmenu links */
-  --nav-hover-color: #116530; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #116530; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
-}
+  /* Nav Menu Colors */
+  :root {
+    --nav-color: #1a241b; /* Darker navigation text */
+    --nav-hover-color: #4a9d5f; /* Vibrant green on hover */
+    --nav-mobile-background-color: #ffffff; /* Clean white mobile menu */
+    --nav-dropdown-background-color: #f8faf7; /* Subtle green-tinted dropdown */
+    --nav-dropdown-color: #1a241b; /* Darker dropdown text */
+    --nav-dropdown-hover-color: #4a9d5f; /* Vibrant green hover state */
+  }
 
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
-
+/* Light Background Variant */
 .light-background {
-  --background-color: #f9f9f9;
+  --background-color: #edf4ed; /* Light sage green */
   --surface-color: #ffffff;
 }
 
+/* Dark Background Variant */
 .dark-background {
-  --background-color: #060606;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --accent-color: #2ea359;
-  --surface-color: #252525;
-  --contrast-color: #ffffff;
+  --background-color: #0d2818; /* Very deep forest background */
+  --default-color: #e8f3e8; /* Light mint text */
+  --heading-color: #ffffff; /* Pure white headings for dark mode */
+  --accent-color: #5cb574; /* Bright growth green */
+  --surface-color: #1a3520; /* Elevated dark green surface */
+  --contrast-color: #ffffff; /* Pure white for maximum contrast */
 }
 
 /* Smooth scroll */
