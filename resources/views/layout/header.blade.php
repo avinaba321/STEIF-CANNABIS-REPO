@@ -3,7 +3,7 @@
 
 
 <a href="{{ url('/home') }}" class="logo d-flex align-items-center">
-<img src="{{ asset('assets/img/logo.png') }}" alt="AgriCulture">
+<img src="{{ asset('assets/img/organic-farmiz-logo-home.png') }}" alt="AgriCulture">
 {{-- <h1 class="sitename">AgriCulture</h1> --}}
 </a>
 

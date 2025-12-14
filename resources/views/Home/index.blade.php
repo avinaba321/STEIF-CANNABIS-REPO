@@ -1,20 +1,33 @@
+
 @extends('layout.app')
 
 
 @section('title','Home - Organic Farmiz')
 
-
 @section('content')
+<div id="age-modal" class="age-overlay">
+  <div class="age-card">
+    <div class="age-icon">
+      <img src="{{ asset('assets/img/organic-farmiz-logo.png') }}" alt="Cannabis Icon">
+    </div>
+
+    <h2>Are you over the age of 21?</h2>
+
+    <p>
+      You must be over the age of 21 in New Jersey to access Organic Farms,
+      please confirm your age below.
+    </p>
+
+    <div class="age-buttons">
+      <button class="btn-yes" onclick="confirmAge()">I'm Over 21</button>
+      <button class="btn-no" onclick="denyAge()">Under 21</button>
+    </div>
+  </div>
+</div>
 {{-- Paste or adapt the homepage `main` content here. The file below contains the hero, services, about, testimonials, recent posts, and CTA sections. --}}
-
-
-{{-- Hero Section
-@includeWhen(true, 'partials.hero') --}}
-
-
 {{-- Services Section (original markup moved inline) --}}
-  <main class="main">
-
+<!-- Age Verification Modal -->
+    
     <!-- Hero Section -->
     {{-- <section id="hero" class="hero section dark-background">
 
@@ -73,8 +86,6 @@
       </div>
 
     </section><!-- /Hero Section --> --}}
-
-
     <!-- Hero Section -->
 <section id="hero" class="hero section dark-background">
 
@@ -87,11 +98,16 @@
         <h2>Farming is the best solution of worlds starvation</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-        <!-- Buttons -->
-        <div class="hero-btn-group mt-3">
-          <a href="#products" class="btn btn-success px-4 py-2 me-2">View Products</a>
-          <a href="#contact" class="btn btn-outline-light px-4 py-2">Contact Us</a>
-        </div>
+        <div class="hero-btn-group mt-4">
+        <a href="#products" class="btn btn-success hero-btn">
+          View Products
+        </a>
+        <a href="#contact" class="btn btn-outline-light hero-btn">
+          Contact Us
+        </a>
+      </div>
+
+
       </div>
     </div>
 
@@ -139,7 +155,7 @@
 
 
     <!-- Controls -->
-    <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+    {{-- <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
       <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
     </a>
 
@@ -147,7 +163,7 @@
       <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
     </a>
 
-    <ol class="carousel-indicators"></ol>
+    <ol class="carousel-indicators"></ol> --}}
 
   </div>
 
@@ -545,74 +561,6 @@
       </div>
     </section><!-- /Services 2 Section -->
 
-    <!-- Testimonials Section -->
-    <section class="testimonials-12 testimonials section" id="testimonials">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>TESTIMONIALS</h2>
-        <p>Necessitatibus eius consequatur</p>
-      </div><!-- End Section Title -->
-
-      <div class="testimonial-wrap">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 mb-4 mb-md-4">
-              <div class="testimonial">
-                <img src="assets/img/testimonials/testimonials-1.jpg" alt="Testimonial author">
-                <blockquote>
-                  <p>
-                    “Lorem ipsum dolor sit, amet consectetur adipisicing
-                    elit. Provident deleniti iusto molestias, dolore vel fugiat
-                    ab placeat ea?”
-                  </p>
-                </blockquote>
-                <p class="client-name">James Smith</p>
-              </div>
-            </div>
-            <div class="col-md-6 mb-4 mb-md-4">
-              <div class="testimonial">
-                <img src="assets/img/testimonials/testimonials-2.jpg" alt="Testimonial author">
-                <blockquote>
-                  <p>
-                    “Lorem ipsum dolor sit, amet consectetur adipisicing
-                    elit. Provident deleniti iusto molestias, dolore vel fugiat
-                    ab placeat ea?”
-                  </p>
-                </blockquote>
-                <p class="client-name">Kate Smith</p>
-              </div>
-            </div>
-            <div class="col-md-6 mb-4 mb-md-4">
-              <div class="testimonial">
-                <img src="assets/img/testimonials/testimonials-3.jpg" alt="Testimonial author">
-                <blockquote>
-                  <p>
-                    “Lorem ipsum dolor sit, amet consectetur adipisicing
-                    elit. Provident deleniti iusto molestias, dolore vel fugiat
-                    ab placeat ea?”
-                  </p>
-                </blockquote>
-                <p class="client-name">Claire Anderson</p>
-              </div>
-            </div>
-            <div class="col-md-6 mb-4 mb-md-4">
-              <div class="testimonial">
-                <img src="assets/img/testimonials/testimonials-4.jpg" alt="Testimonial author">
-                <blockquote>
-                  <p>
-                    “Lorem ipsum dolor sit, amet consectetur adipisicing
-                    elit. Provident deleniti iusto molestias, dolore vel fugiat
-                    ab placeat ea?”
-                  </p>
-                </blockquote>
-                <p class="client-name">Dan Smith</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- /Testimonials Section -->
-
     <!-- Recent Posts Section -->
     <section id="recent-posts" class="recent-posts section">
 
@@ -756,17 +704,13 @@
       </div>
     </section><!-- /Call To Action Section -->
 
-  </main>
-
 {{-- The big services grid from the original HTML --}}
 {{-- For brevity this view references the original markup; copy the services markup into a partial if you prefer. --}}
 
 
 {{-- You can paste the large .service-items grid here or split into another partial. --}}
-</section>
 
 
 {{-- ... other sections: about, services-2, testimonials, recent-posts, call-to-action ... --}}
-
 
 @endsection

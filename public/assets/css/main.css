@@ -11,47 +11,61 @@
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* Fonts - Cannabis Farming Theme */
+
+
 :root {
   --default-font: "Inter", "Roboto", system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --heading-font: "Montserrat", "Poppins", sans-serif;
   --nav-font: "Montserrat", sans-serif;
 }
 
-/* Global Colors - Cannabis Farming Theme with Darker Text */
+/* =========================================================
+   GLOBAL COLORS — Organic Cannabis Theme (Screenshot Match)
+   ========================================================= */
 :root { 
-  --background-color: #f8faf7; /* Soft off-white with subtle green tint */
-  --default-color: #1a241b; /* Much darker forest green for maximum readability */
-  --heading-color: #0d2818; /* Very dark green, almost black for strong headings */
-  --accent-color: #4a9d5f; /* Vibrant cannabis leaf green for CTAs */
-  --surface-color: #ffffff; /* Clean white for card backgrounds */
-  --contrast-color: #ffffff; /* White text on colored backgrounds */
+  --background-color: #98c183;   /* Warm sage background */
+  --default-color: #1E2D24;      /* Dark green text */
+  --heading-color: #0F2F22;      /* Deep forest green headings */
+  --accent-color: #042013;       /* Primary cannabis green */
+  --surface-color: #0E3B2A;      /* Card / modal background */
+  --contrast-color: #F2F0E6;     /* Cream contrast text */
 }
 
-  /* Nav Menu Colors */
-  :root {
-    --nav-color: #1a241b; /* Darker navigation text */
-    --nav-hover-color: #4a9d5f; /* Vibrant green on hover */
-    --nav-mobile-background-color: #ffffff; /* Clean white mobile menu */
-    --nav-dropdown-background-color: #f8faf7; /* Subtle green-tinted dropdown */
-    --nav-dropdown-color: #1a241b; /* Darker dropdown text */
-    --nav-dropdown-hover-color: #4a9d5f; /* Vibrant green hover state */
-  }
+/* =========================================================
+   NAVIGATION COLORS
+   ========================================================= */
+:root {
+  --nav-color: #0F2F22;
+  --nav-hover-color: #1F6B4A;
+  --nav-mobile-background-color: #0E3B2A;
+  --nav-dropdown-background-color: #0E3B2A;
+  --nav-dropdown-color: #F2F0E6;
+  --nav-dropdown-hover-color: #7FB89B;
+}
 
-/* Light Background Variant */
+/* =========================================================
+   LIGHT BACKGROUND PRESET (Page body like screenshot)
+   ========================================================= */
 .light-background {
-  --background-color: #edf4ed; /* Light sage green */
-  --surface-color: #ffffff;
+  --background-color: #D8DCC6;
+  --surface-color: #F2F0E6;
+  --default-color: #1E2D24;
+  --heading-color: #0F2F22;
+  --accent-color: #0B3A2A;
 }
 
-/* Dark Background Variant */
+/* =========================================================
+   DARK BACKGROUND PRESET (Age Gate / Modal / CTA)
+   ========================================================= */
 .dark-background {
-  --background-color: #0d2818; /* Very deep forest background */
-  --default-color: #e8f3e8; /* Light mint text */
-  --heading-color: #ffffff; /* Pure white headings for dark mode */
-  --accent-color: #5cb574; /* Bright growth green */
-  --surface-color: #1a3520; /* Elevated dark green surface */
-  --contrast-color: #ffffff; /* Pure white for maximum contrast */
+  --background-color: #071807;
+  --default-color: #F2F0E6;
+  --heading-color: #F2F0E6;
+  --accent-color: #7FB89B;
+  --surface-color: #0B2E21;
+  --contrast-color: #F2F0E6;
 }
+
 
 /* Smooth scroll */
 :root {
@@ -224,19 +238,33 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: rgb(7, 24, 7);
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
+   height: 100px; /* or whatever fixed height you want */
 }
+
+.header {
+  height: 64px; /* or whatever height you want */
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
 
 .header .logo {
   line-height: 1;
 }
 
 .header .logo img {
-  max-height: 32px;
+  max-height: 100%; /* scales within header */
+  height: 100px;
+  width: 100px;
   margin-right: 8px;
+  object-fit: contain;
+
 }
 
 .header .logo h1 {
@@ -273,11 +301,11 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-color);
+    color: var(--background-color);
     padding: 18px 15px;
     font-size: 16px;
     font-family: var(--nav-font);
-    font-weight: 400;
+    font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -361,7 +389,7 @@ h6 {
 }
 
 /* Navmenu - Mobile */
-@media (max-width: 1199px) {
+/* @media (max-width: 1199px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
     font-size: 28px;
@@ -485,6 +513,72 @@ h6 {
   .mobile-nav-active .navmenu>ul {
     display: block;
   }
+} */
+
+/* ================================
+   New MOBILE NAV – FULL SCREEN STYLE
+================================ */
+@media (max-width: 1199px) {
+
+  .navmenu ul {
+    display: none;
+    position: fixed;
+    inset: 0;
+    padding: 70px 0 20px;
+    margin: 0;
+    background: rgb(7, 24, 7); /* cannabis dark green */
+    border-radius: 0;
+    overflow-y: auto;
+    z-index: 9998;
+  }
+
+  .navmenu ul li {
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+  }
+
+  .navmenu ul li a {
+    color: #ffffff;
+    padding: 18px 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    display: block;
+    transition: all 0.25s ease;
+  }
+
+  .navmenu ul li a:hover,
+  .navmenu ul li a.active {
+    background: rgba(255,255,255,0.06);
+    padding-left: 32px;
+    color: #a7e3b2;
+  }
+
+  /* Toggle Icon */
+  .mobile-nav-toggle {
+    font-size: 28px;
+    cursor: pointer;
+    color: #ffffff;
+    z-index: 9999;
+  }
+
+  /* When menu active */
+  .mobile-nav-active {
+    overflow: hidden;
+  }
+
+  .mobile-nav-active .navmenu ul {
+    display: block;
+  }
+
+  /* Change icon to close */
+  .mobile-nav-active .mobile-nav-toggle {
+    position: fixed;
+    top: 18px;
+    right: 20px;
+    font-size: 30px;
+    color: #f5c76a; /* accent gold */
+  }
+
+  
 }
 
 /*--------------------------------------------------------------
@@ -749,7 +843,7 @@ h6 {
 --------------------------------------------------------------*/
 section,
 .section {
-  color: var(--default-color);
+  color: var(--contrast-col);
   background-color: var(--background-color);
   padding: 60px 0;
   scroll-margin-top: 100px;
@@ -783,6 +877,7 @@ section,
   margin-bottom: 0;
   font-family: var(--heading-font);
   font-size: 32px;
+  color: #042013;
 }
 
 /*--------------------------------------------------------------
@@ -855,6 +950,7 @@ section,
 .hero p {
   animation: fadeInDown 1s both 0.2s;
   text-align: center;
+  color: wheat;
 }
 
 @media (min-width: 1024px) {
@@ -957,7 +1053,7 @@ section,
 }
 
 .services .content .service-item {
-  background-color: var(--surface-color);
+  background-color: #071807;
   padding: 20px 30px;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   border-left: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
@@ -975,7 +1071,7 @@ section,
 .services .content .service-item .service-item-icon {
   position: relative;
   margin-bottom: 20px;
-  color: var(--accent-color);
+  color:#98c183;
 }
 
 .services .content .service-item .service-item-icon img {
@@ -1001,12 +1097,13 @@ section,
 
 .services .content .service-item .service-item-content .service-heading {
   font-size: 20px;
-  color: var(--default-color);
+  color: var(--contrast-color);
   font-weight: 400;
 }
 
 .services .content .service-item .service-item-content p {
   font-size: 15px;
+  color: #c7c7c7;
 }
 
 @media (min-width: 769px) {
@@ -1045,7 +1142,7 @@ section,
 }
 
 .about .content {
-  background: var(--accent-color);
+  background: #071807;
   color: var(--contrast-color);
   padding: 7rem 0;
 }
@@ -2280,11 +2377,13 @@ section,
   padding: 10px 28px;
   border-radius: 50px;
   font-weight: 600;
+   color: #98c183;
 }
 
 .hero-btn-group .btn-success {
-  background-color: #6c9c3c;
+  background-color: #071807;
   border: none;
+ 
 }
 
 .hero-btn-group .btn-success:hover {
@@ -2292,6 +2391,193 @@ section,
 }
 
 .hero-btn-group .btn-outline-light:hover {
-  background-color: #fff;
-  color: #000;
+  background-color: #5a842f;;
+  color: #071807;
+}
+
+.hero-btn-group {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Shared button style */
+.hero-btn {
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 14px 32px;
+  min-width: 200px;
+  transition: all 0.3s ease;
+}
+
+/* Hover polish */
+.hero-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* 📱 Mobile (default) */
+@media (max-width: 575px) {
+  .hero-btn-group {
+    flex-direction: column;
+  }
+
+  .hero-btn {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* 📱 Tablet */
+@media (min-width: 576px) and (max-width: 991px) {
+  .hero-btn {
+    min-width: 180px;
+  }
+}
+
+/* 💻 Laptop */
+@media (min-width: 992px) {
+  .hero-btn {
+    min-width: 220px;
+  }
+}
+
+/* 🖥️ Large Desktop */
+@media (min-width: 1400px) {
+  .hero-btn {
+    min-width: 260px;
+    padding: 16px 38px;
+    font-size: 1.05rem;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Age Varification Modal
+--------------------------------------------------------------*/
+/* Overlay (with blur effect) */
+.age-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 35, 22, 0.45); /* darker tint for contrast */
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px; /* ensures spacing on very small screens */
+}
+
+/* Modal Card */
+.age-card {
+  background: rgb(7, 24, 7); /* slight transparency for depth */
+  color: var(--background-color);
+  border-radius: 24px;
+  padding: 40px 28px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.45);
+  animation: fadeUp 0.55s ease;
+  backdrop-filter: blur(6px);
+}
+
+.age-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.age-icon img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+/* Text */
+.age-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 14px;
+  color: whitesmoke;
+}
+
+.age-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Buttons */
+.age-buttons {
+  display: flex;
+  gap: 14px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.age-buttons button {
+  flex: 1;
+  border-radius: 999px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Yes Button */
+.btn-yes {
+  background: #d9d4c5;
+  color: #0e2d1f;
+  border: none;
+}
+
+.btn-yes:hover {
+  background: #efece2;
+}
+
+/* No Button */
+.btn-no {
+  background: transparent;
+  color: #d9d4c5;
+  border: 1.5px solid #d9d4c5;
+}
+
+.btn-no:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile fine-tuning */
+@media (max-width: 480px) {
+  .age-card {
+    padding: 28px 20px;
+    border-radius: 18px;
+  }
+
+  .age-card h2 {
+    font-size: 1.4rem;
+  }
+
+  .age-buttons {
+    gap: 10px;
+  }
 }

@@ -46,40 +46,48 @@
   });
 
   /**
-   * Mobile nav toggle
-   */
-  const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
+ * Mobile nav toggle
+ */
+const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
 
-  function mobileNavToogle() {
-    document.querySelector('body').classList.toggle('mobile-nav-active');
-    mobileNavToggleBtn.classList.toggle('bi-list');
-    mobileNavToggleBtn.classList.toggle('bi-x');
-  }
-  mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
+function mobileNavToggle() {
+  document.body.classList.toggle('mobile-nav-active');
 
-  /**
-   * Hide mobile nav on same-page/hash links
-   */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
-      if (document.querySelector('.mobile-nav-active')) {
-        mobileNavToogle();
-      }
-    });
+  // Toggle icons
+  mobileNavToggleBtn.classList.toggle('bi-list');
+  mobileNavToggleBtn.classList.toggle('bi-x-lg');
+}
 
+// Toggle menu on icon click
+if (mobileNavToggleBtn) {
+  mobileNavToggleBtn.addEventListener('click', mobileNavToggle);
+}
+
+/**
+ * Close mobile nav on link click
+ */
+document.querySelectorAll('#navmenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    if (document.body.classList.contains('mobile-nav-active')) {
+      mobileNavToggle();
+    }
   });
+});
 
-  /**
-   * Toggle mobile nav dropdowns
-   */
-  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
-      e.preventDefault();
-      this.parentNode.classList.toggle('active');
-      this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
-      e.stopImmediatePropagation();
-    });
+/**
+ * Mobile dropdown toggle (optional / future use)
+ */
+document.querySelectorAll('.navmenu .toggle-dropdown').forEach(toggle => {
+  toggle.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    this.parentNode.classList.toggle('active');
+    this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
+
+    e.stopPropagation();
   });
+});
+
 
   /**
    * Preloader
@@ -165,3 +173,24 @@
   });
 
 })();
+
+/*--------------------------------------------------------------
+# Age Varification Modal Js
+--------------------------------------------------------------*/
+  function confirmAge() {
+    localStorage.setItem('ageVerified', 'true');
+    document.getElementById('age-modal').style.display = 'none';
+  }
+
+  function denyAge() {
+    alert('You must be 21+ to enter this site.');
+    window.location.href = 'https://www.google.com';
+  }
+
+  // Check on load
+  window.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('ageVerified') === 'true') {
+      document.getElementById('age-modal').style.display = 'none';
+    }
+  });
+
