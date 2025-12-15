@@ -98,15 +98,18 @@
         <h2>Farming is the best solution of worlds starvation</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-        <div class="hero-btn-group mt-4">
+        {{-- <div class="hero-btn-group mt-4">
         <a href="#products" class="btn btn-success hero-btn">
           View Products
         </a>
         <a href="#contact" class="btn btn-outline-light hero-btn">
           Contact Us
         </a>
-      </div>
-
+      </div> --}}
+        <div class="hero-btn-group mt-3">
+          <a href="#products" class="btn btn-success px-4 py-2 me-2">View Products</a>
+          <a href="#contact" class="btn btn-outline-light px-4 py-2">Contact Us</a>
+        </div>
 
       </div>
     </div>
