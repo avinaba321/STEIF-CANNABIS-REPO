@@ -50,7 +50,7 @@
 
     <!-- Slide 2 -->
     <div class="carousel-item">
-      <img src="assets/img/can-bg-2.png" alt="">
+      <img src="{{ asset('assets/img/can-bg-2.png') }}" alt="">
       <div class="carousel-container">
         <h2>Organic vegetables is good for health</h2>
         <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</p>
@@ -68,7 +68,7 @@
 
     <!-- Slide 3 -->
     <div class="carousel-item">
-      <img src="assets/img/can-bg-3.png" alt="">
+      <img src="{{ asset('assets/img/can-bg-3.png') }}" alt="">
       <div class="carousel-container">
         <h2>Providing Fresh Produce Every Single Day</h2>
         <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
@@ -86,7 +86,7 @@
 
      <!-- Slide 4 -->
     <div class="carousel-item">
-      <img src="assets/img/can-bg-4.jpg" alt="">
+      <img src="{{ asset('assets/img/can-bg-4.jpg') }}" alt="">
       <div class="carousel-container">
         <h2>Providing Fresh Produce Every Single Day</h2>
         <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
