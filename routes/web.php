@@ -15,3 +15,8 @@ Route::get('/home', function () {
 Route::get('/about', function () {
     return view('About.about');
 })->name('about');
+
+
+Route::get('/pricing', function () {
+    return view('Pricing.pricing');
+})->name('pricing');

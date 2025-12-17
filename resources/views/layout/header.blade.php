@@ -21,7 +21,7 @@
 <li><a href="{{ route('about') }}" class="{{ Request::is('/about') ? 'active' : '' }}">About</a></li>
 <li><a href="{{ url('about') }}" class="{{ Request::is('/') ? 'active' : '' }}">Products</a></li>
 <li><a href="{{ url('services') }}" class="{{ Request::is('services*') ? 'active' : '' }}">White Label</a></li>
-<li><a href="{{ url('testimonials') }}">Pricing</a></li>
+<li><a href="{{ route('pricing') }}">Pricing</a></li>
 <li><a href="{{ url('blog') }}">Order Info</a></li>
 <li><a href="{{ url('contact') }}">Contact</a></li>
 </ul>

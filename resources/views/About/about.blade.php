@@ -449,79 +449,94 @@
   transform: translateY(-2px);
 }
 
-/* Hero + Accent Image Grid */
+/* Image Grid Wrapper */
 .image-grid-hero {
   position: relative;
-  display: flex;
-  justify-content: center;
+  width: 100%;
+  max-width: 560px;
+  margin-left: auto;
 }
 
-/* Shared image styling */
+/* Shared Image Box */
 .image-box {
-  border-radius: 26px;
   overflow: hidden;
-  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.28);
-  background: #000;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .image-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
 /* Large Hero Image */
 .image-hero {
-  width: 85%;
-  max-width: 460px;
-  aspect-ratio: 4 / 5;
+  width: 100%;
+  height: 420px;
 }
 
 /* Small Accent Image */
 .image-accent {
   position: absolute;
-  bottom: -30px;
-  right: 0;
-  width: 45%;
-  max-width: 220px;
-  aspect-ratio: 1 / 1;
-  border: 4px solid  #14532d; /* brand color */
+  bottom: -40px;
+  right: -40px;
+  width: 220px;
+  height: 160px;
+  border: 6px solid #192b10; /* matches site theme */
+  /* background: #98c183; */
 }
 
-/* Tablet */
+/* Hover Effect */
+.image-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* ===================== */
+/* 📱 Tablet (≤ 991px) */
+/* ===================== */
 @media (max-width: 991px) {
+  .image-grid-hero {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
   .image-hero {
-    width: 90%;
+    height: 360px;
   }
 
   .image-accent {
-    right: 10px;
+    width: 180px;
+    height: 130px;
+    right: -20px;
     bottom: -20px;
-    width: 40%;
   }
 }
 
-/* Mobile */
+/* ===================== */
+/* 📱 Mobile (≤ 575px) */
+/* ===================== */
 @media (max-width: 575px) {
   .image-grid-hero {
-    flex-direction: column;
-    align-items: center;
+    position: relative;
+    margin-top: 40px;
   }
 
   .image-hero {
-    width: 100%;
+    height: 280px;
   }
 
   .image-accent {
-    position: relative;
-    bottom: auto;
-    right: auto;
-    width: 70%;
-    margin-top: 16px;
-    border-width: 3px;
+    position: static;
+    width: 100%;
+    height: 180px;
+    margin-top: 18px;
+    border-width: 4px;
   }
 }
+
 
 /* RESPONSIVE */
 @media (max-width: 991px) {
@@ -717,12 +732,12 @@
     
     <!-- Large Hero Image -->
     <div class="image-box image-hero">
-      <img src="assets/img/About/story-bg-1.png" alt="Organic Cannabis Cultivation">
+      <img src="{{ asset('assets/img/About/value-bg-2.png') }}" alt="Organic Cannabis Cultivation">
     </div>
 
     <!-- Small Accent Image -->
     <div class="image-box image-accent">
-      <img src="assets/img/About/story-bg-2.jpg" alt="Premium Cannabis Flower">
+      <img src="{{ asset('assets/img/About/value-bg-1.png') }}" alt="Premium Cannabis Flower">
     </div>
 
   </div>
