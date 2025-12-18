@@ -20,3 +20,7 @@ Route::get('/about', function () {
 Route::get('/pricing', function () {
     return view('Pricing.pricing');
 })->name('pricing');
+
+Route::get('/whitelabel', function () {
+    return view('White Label.whitelabel');
+})->name('whitelabel');
