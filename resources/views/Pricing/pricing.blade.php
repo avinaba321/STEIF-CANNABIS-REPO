@@ -297,10 +297,10 @@
 
 </style>
 <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/about/about-bg.png);">
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/price-bg-1.png);">
       <div class="container position-relative">
         <h1>Pricing</h1>
-        <p>We specialize in certified organic cannabis cultivation, offering premium flower and white-label solutions built on quality, compliance, and sustainability.</p>
+        <p>Our pricing reflects quality cultivation, regulatory compliance, and flexible white-label solutions designed to support growing brands.</p>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="{{ route('home') }}">Home</a></li>
