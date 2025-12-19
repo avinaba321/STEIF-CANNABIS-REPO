@@ -4,7 +4,7 @@
 
 @section('content')
 <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/price-bg-1.png);">
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/White_Label/white-labl-bg-1.png);">
       <div class="container position-relative">
         <h1>Pricing</h1>
         <p>Our pricing reflects quality cultivation, regulatory compliance, and flexible white-label solutions designed to support growing brands.</p>
