@@ -24,3 +24,8 @@ Route::get('/pricing', function () {
 Route::get('/whitelabel', function () {
     return view('White Label.whitelabel');
 })->name('whitelabel');
+
+
+Route::get('/orderinfo', function () {
+    return view('Order Info.Order_Info');
+})->name('orderinfo');
