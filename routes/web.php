@@ -29,3 +29,7 @@ Route::get('/whitelabel', function () {
 Route::get('/orderinfo', function () {
     return view('Order Info.Order_Info');
 })->name('orderinfo');
+
+Route::get('/products', function () {
+    return view('Products.products');
+})->name('products');

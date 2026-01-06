@@ -19,11 +19,11 @@
 <ul>
 <li><a href="{{ route('home') }}" class="{{ Request::is('/home') ? 'active' : '' }}">Home</a></li>
 <li><a href="{{ route('about') }}" class="{{ Request::is('/about') ? 'active' : '' }}">About</a></li>
-<li><a href="{{ url('about') }}" class="{{ Request::is('/') ? 'active' : '' }}">Products</a></li>
+<li><a href="{{ route('products') }}">Products</a></li>
 <li><a href="{{ route('whitelabel') }}">White Label</a></li>
 <li><a href="{{ route('pricing') }}">Pricing</a></li>
 <li><a href="{{ route('orderinfo')}}">Order Info</a></li>
-<li><a href="{{ url('contact') }}">Contact</a></li>
+<li><a href="">Contact</a></li>
 </ul>
 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 </nav>

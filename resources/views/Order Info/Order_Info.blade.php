@@ -170,7 +170,7 @@ and documented chain-of-custody procedures to ensure consistency and trust.</p>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="{{ route('home') }}">Home</a></li>
-            <li class="current">Pricing</li>
+            <li class="current">Order Info</li>
           </ol>
         </nav>
       </div>
@@ -298,7 +298,7 @@ and documented chain-of-custody procedures to ensure consistency and trust.</p>
 
 
 <!-- 05 SUPPORT & RETURNS -->
-<div class="order-section dark">
+{{-- <div class="order-section dark">
   <div class="container">
     <div class="row align-items-center gy-5">
 
@@ -317,7 +317,38 @@ and documented chain-of-custody procedures to ensure consistency and trust.</p>
 
     </div>
   </div>
+</div> --}}
+<!-- 05 SUPPORT & RETURNS -->
+<div class="order-section dark">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+
+      <div class="col-lg-6 fade-left">
+        <h2>Returns & Refunds</h2>
+        <p>
+          We stand behind the quality of every product we deliver.
+          If you encounter any issues with your order, our dedicated support
+          team is ready to assist you. Please reach out within 7 days of
+          delivery so we can provide a fast and fair resolution.
+        </p>
+
+        <!-- CTA Button -->
+        <a href="#contact" class="order-btn">
+          Contact Support
+          <i class="bi bi-headset ms-2"></i>
+        </a>
+      </div>
+
+      <div class="col-lg-6 fade-right">
+        <img src="{{ asset('assets/img/Order_info/refund.jpg') }}"
+             class="order-img"
+             alt="Support & Returns">
+      </div>
+
+    </div>
+  </div>
 </div>
+
 
 </section>
 
