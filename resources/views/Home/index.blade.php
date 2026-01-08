@@ -35,7 +35,7 @@
         <h2>ORGANIC FARMZ</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <div class="hero-btn-group mt-3">
-        <a href="#products" class="btn hero-btn hero-btn-primary">
+        <a href="{{ route('products') }}" class="btn hero-btn hero-btn-primary">
           View Products
         </a>
         <a href="#contact" class="btn hero-btn hero-btn-outline">
@@ -56,7 +56,7 @@
         <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</p>
 
         <div class="hero-btn-group mt-3">
-        <a href="#products" class="btn hero-btn hero-btn-primary">
+        <a href="{{ route('products') }}" class="btn hero-btn hero-btn-primary">
           View Products
         </a>
         <a href="#contact" class="btn hero-btn hero-btn-outline">
@@ -74,7 +74,7 @@
         <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
 
          <div class="hero-btn-group mt-3">
-        <a href="#products" class="btn hero-btn hero-btn-primary">
+        <a href="{{ route('products') }}" class="btn hero-btn hero-btn-primary">
           View Products
         </a>
         <a href="#contact" class="btn hero-btn hero-btn-outline">
@@ -92,7 +92,7 @@
         <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
 
         <div class="hero-btn-group mt-3">
-        <a href="#products" class="btn hero-btn hero-btn-primary">
+        <a href="{{ route('products') }}" class="btn hero-btn hero-btn-primary">
           View Products
         </a>
         <a href="#contact" class="btn hero-btn hero-btn-outline">
@@ -471,7 +471,7 @@
           Contact Sales
         </a>
 
-        <a href="#pricing" class="btn btn-cta-outline">
+        <a href="{{ route('pricing') }}" class="btn btn-cta-outline">
           View Pricing
         </a>
       </div>      

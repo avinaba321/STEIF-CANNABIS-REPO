@@ -33,3 +33,8 @@ Route::get('/orderinfo', function () {
 Route::get('/products', function () {
     return view('Products.products');
 })->name('products');
+
+
+Route::get('/contact', function () {
+    return view('Contact.contact');
+})->name('contact');

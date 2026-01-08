@@ -4,117 +4,230 @@
 
 @section('content')
 <style>
-    .products-grid {
+/* ===============================
+   PRODUCTS GRID SECTION
+================================ */
+.products-grid {
   background: #98c183;
   padding: 110px 0;
 }
 
+/* Header */
 .products-header h2 {
   font-size: 44px;
   font-weight: 700;
   color: #0b2a17;
+  text-align: center;
 }
 
 .products-header p {
   color: #0b2a17;
-  max-width: 600px;
-  margin: 10px auto 40px;
+  max-width: 620px;
+  margin: 12px auto 42px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-/* Filters */
+/* ===============================
+   FILTER BUTTONS
+================================ */
 .product-filters {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 40px;
+  gap: 14px;
+  margin-bottom: 50px;
 }
 
 .filter-btn {
-  padding: 10px 22px;
+  padding: 11px 26px;
   border-radius: 999px;
-  border: 1px solid  #0b2a17;
+  border: 1.5px solid #0b2a17;
   background: transparent;
   font-weight: 600;
+  font-size: 14px;
+  color: #0b2a17;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .filter-btn.active,
 .filter-btn:hover {
-  background:  #0b2a17;
-  color: #fff;
+  background: #0b2a17;
+  color: #ffffff;
+  transform: translateY(-2px);
 }
 
-/* Product Card */
+/* ===============================
+   PRODUCT CARD
+================================ */
 .product-card {
   background: #061407;
   border-radius: 22px;
   overflow: hidden;
   height: 100%;
+  display: flex;
+  flex-direction: column;
   box-shadow: 0 25px 60px rgba(0,0,0,0.35);
-  transition: 0.4s;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
+/* Hover */
+.product-card:hover {
+  transform: translateY(-14px);
+  box-shadow: 0 40px 90px rgba(6,20,7,0.7);
+}
+
+/* ===============================
+   PRODUCT IMAGE
+================================ */
 .product-card img {
-  max-width: 100%;
-  height: 370px;
+  width: 100%;
+  height: 360px;
   object-fit: cover;
 }
 
+/* ===============================
+   PRODUCT BODY
+================================ */
 .product-body {
   padding: 26px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .product-body h3 {
-  color: #fff;
+  color: #ffffff;
   font-size: 20px;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
 .product-body p {
   color: #cfe3d2;
   font-size: 14px;
-  margin-bottom: 18px;
+  line-height: 1.6;
+  margin-bottom: auto;
 }
 
-/* Buy Button */
+/* ===============================
+   BUY BUTTON
+================================ */
 .btn-buy {
-  display: inline-block;
-  padding: 12px 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 30px;
+  margin-top: 22px;
   background: linear-gradient(135deg, #1f8f4a, #14532d);
-  color: #fff;
+  color: #ffffff;
   border-radius: 999px;
   font-weight: 700;
-  text-decoration: none;
-  transition: 0.3s;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .btn-buy:hover {
   transform: translateY(-3px);
   background: linear-gradient(135deg, #27ae60, #1f8f4a);
+  box-shadow: 0 14px 34px rgba(31,143,74,0.55);
 }
 
-/* Hover Effect */
-.product-card:hover {
-  transform: translateY(-14px);
-  box-shadow: 0 40px 90px rgba(6,20,7,0.7);
-}
-
-/* View More */
+/* ===============================
+   VIEW MORE BUTTON
+================================ */
 .btn-view-more {
   display: inline-block;
-  padding: 14px 38px;
+  padding: 15px 44px;
   background: #061407;
-  color: #fff;
+  color: #ffffff;
   border-radius: 999px;
   font-weight: 700;
+  font-size: 15px;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .btn-view-more:hover {
   background: #14532d;
+  transform: translateY(-3px);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+/* Tablet */
+@media (max-width: 991px) {
+  .products-header h2 {
+    font-size: 36px;
+  }
+
+  .product-card img {
+    height: auto;          
+    max-height: 320px;    
+    object-fit: contain;  
+    background: #061407;  
+    padding: 14px;      
+  }
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+  
+  .product-card {
+    padding-top: 10px;
+  }
+
+  .product-body {
+    padding-top: 18px;
+  }
+  
+  .products-grid {
+    padding: 80px 0;
+  }
+
+  .products-header h2 {
+    font-size: 30px;
+  }
+
+  .products-header p {
+    font-size: 15px;
+  }
+
+  /* .product-card img {
+    height: 240px;
+  } */
+
+  .product-card img {
+    height: auto;          /* allow natural height */
+    max-height: 260px;     /* control size */
+    object-fit: contain;   /* show full image */
+    background: #061407;   /* clean background */
+    padding: 12px;         /* breathing room */
+  }
+
+  .product-body {
+    padding: 20px;
+  }
+
+  .product-body h3 {
+    font-size: 18px;
+  }
+
+  .btn-buy {
+    width: 100%;
+  }
+
+  .btn-view-more {
+    width: 100%;
+    padding: 14px 0;
+  }
 }
 
 /* ===============================
@@ -213,7 +326,9 @@
 }
 
 
-/* MODAL */
+/* ===============================
+   MODAL WRAPPER
+================================ */
 .product-modal {
   position: fixed;
   inset: 0;
@@ -222,26 +337,50 @@
 }
 
 .product-modal.active {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Overlay */
 .modal-overlay {
   position: absolute;
   inset: 0;
   background: rgba(6, 20, 7, 0.85);
 }
 
+
+
+
+
+/* ===============================
+   MODAL CONTENT
+================================ */
 .modal-content {
   position: relative;
+  width: calc(100% - 40px);
   max-width: 1100px;
-  margin: 5% auto;
+  max-height: 90vh;
+  overflow-y: auto;
   background: #061407;
   border-radius: 20px;
   padding: 40px;
   color: #fff;
   animation: scaleIn 0.35s ease;
+  z-index: 2;
+    padding: 36px 36px 32px;
 }
 
+/* Scrollbar (optional premium touch) */
+.modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+.modal-content::-webkit-scrollbar-thumb {
+  background: rgba(152,193,131,0.4);
+  border-radius: 10px;
+}
+
+/* Animation */
 @keyframes scaleIn {
   from { transform: scale(0.95); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
@@ -251,26 +390,52 @@
   position: absolute;
   top: 18px;
   right: 22px;
-  background: none;
+  width: 42px;
+  height: 42px;
+  background: #061407;
   border: none;
-  font-size: 28px;
+  font-size: 26px;
   color: #98c183;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  z-index: 10;
 }
 
-/* GRID */
+
+/* ===============================
+   GRID LAYOUT
+================================ */
 .modal-grid {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 40px;
+  grid-template-columns: 0.95fr 1.3fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.modal-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .modal-image img {
   width: 100%;
-  border-radius: 16px;
+  height: auto;
+  max-height: 320px;     /* ⬅ increased */
+  object-fit: contain;
+  background: #061407;
+  padding: 14px;
+  border-radius: 18px;
 }
 
-/* CONTENT */
+
+/* ===============================
+   CONTENT
+================================ */
 .modal-details h2 {
   font-size: 34px;
   margin-bottom: 6px;
@@ -284,9 +449,11 @@
   font-weight: 600;
 }
 
+/* Stats */
 .stats {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
   margin-bottom: 20px;
 }
 
@@ -297,12 +464,14 @@
   font-size: 14px;
 }
 
+/* Description */
 .description {
   line-height: 1.7;
   margin-bottom: 18px;
   color: #d7e7dc;
 }
 
+/* Details */
 .details-list {
   padding-left: 0;
   list-style: none;
@@ -312,15 +481,17 @@
 .details-list li {
   margin-bottom: 8px;
   font-size: 15px;
-  color: #98c183;;
+  color: #98c183;
 }
 
+/* Note */
 .note {
   font-size: 13px;
   opacity: 0.7;
   margin-bottom: 20px;
 }
 
+/* CTA */
 .btn-enquire {
   display: inline-block;
   background: linear-gradient(135deg, #1f8f4a, #14532d);
@@ -329,14 +500,89 @@
   color: #fff;
   font-weight: 700;
   text-decoration: none;
+  transition: 0.3s;
 }
 
-/* RESPONSIVE */
+.btn-enquire:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #27ae60, #1f8f4a);
+}
+
+/* ===============================
+   TABLET
+================================ */
+@media (max-width: 991px) {
+  .modal-content {
+    padding: 32px;
+  }
+
+  .modal-details h2 {
+    font-size: 28px;
+  }
+}
+
+/* ===============================
+   MOBILE
+================================ */
 @media (max-width: 768px) {
   .modal-grid {
     grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+ .modal-image {
+    position: relative;
+    top: 0;
+  }
+
+  .modal-image img {
+   height: auto;          /* allow natural height */
+    max-height: 260px;     /* control size */
+    object-fit: contain;   /* show full image */
+    background: #061407;   /* clean background */
+    padding: 12px;         /* breathing room */
+  }
+
+  .modal-close {
+    top: 12px;
+    right: 12px;
+  }
+
+  .modal-details h2 {
+    font-size: 24px;
+  }
+
+  .btn-enquire {
+    width: 100%;
+    text-align: center;
   }
 }
+
+@media (max-width: 820px) {
+  .modal-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .modal-image img {
+    max-height: 300px;
+  }
+
+  .modal-details h2 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    padding: 24px;
+  }
+
+  .stats div {
+    font-size: 13px;
+  }
+}
+
 
 
 </style>
@@ -359,132 +605,6 @@
       </div>
     </div>
 <!-- End Page Title -->
-
-   <!-- Blog Posts 2 Section -->
-    {{-- <section id="blog-posts-2" class="blog-posts-2 section">
-
-      <div class="container">
-        <div class="row gy-4">
-
-          <div class="col-lg-4">
-            <article class="position-relative h-100">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-1.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Dolorum optio tempore voluptas dignissimos</h3>
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-lg-4">
-            <article class="position-relative h-100">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-2.jpg" class="img-fluid" alt="">
-              </div>
-
-              <div class="post-content d-flex flex-column">
-                <h3 class="post-title">Nisi magni odit consequatur autem nulla dolorem</h3>
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-lg-4">
-            <article class="position-relative h-100">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-3.jpg" class="img-fluid" alt="">
-              </div>
-
-              <div class="post-content d-flex flex-column">
-                <h3 class="post-title">Possimus soluta ut id suscipit ea ut. In quo quia et soluta libero sit sint.</h3>
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-lg-4">
-            <article class="position-relative h-100">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-4.jpg" class="img-fluid" alt="">
-              </div>
-
-              <div class="post-content d-flex flex-column">
-                <h3 class="post-title">Non rem rerum nam cum quo minus explicabo eius exercitationem.</h3>
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-lg-4">
-            <article class="position-relative h-100">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-5.jpg" class="img-fluid" alt="">
-              </div>
-
-              <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Accusamus quaerat aliquam qui debitis facilis consequatur</h3>
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-lg-4">
-            <article class="position-relative h-100">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="assets/img/blog/blog-6.jpg" class="img-fluid" alt="">
-              </div>
-
-              <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">Distinctio provident quibusdam numquam aperiam aut</h3>
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-        </div>
-      </div>
-
-    </section><!-- /Blog Posts 2 Section -->
-
-    <!-- Blog Pagination Section -->
-    <section id="blog-pagination" class="blog-pagination section">
-
-      <div class="container">
-        <div class="d-flex justify-content-center">
-          <ul>
-            <li><a href="#"><i class="bi bi-chevron-left"></i></a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#" class="active">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li>...</li>
-            <li><a href="#">10</a></li>
-            <li><a href="#"><i class="bi bi-chevron-right"></i></a></li>
-          </ul>
-        </div>
-      </div>
-
-    </section><!-- /Blog Pagination Section --> --}}
 
 <section id="products-grid" class="products-grid">
   <div class="container">
@@ -536,7 +656,7 @@
   <div class="col-lg-4 col-md-6 product-item flower">
   <div class="product-card">
 
-    <img src="{{ asset('assets/img/Products/flower1.png') }}" alt="Mendoz Stomper">
+    <img src="{{ asset('assets/img/Products/flower1.webp') }}" alt="Mendoz Stomper">
 
     <div class="product-body">
       <h3>MANDARIN COOKIES</h3>
@@ -568,7 +688,7 @@
   <div class="col-lg-4 col-md-6 product-item flower">
   <div class="product-card">
 
-    <img src="{{ asset('assets/img/Products/flower2.jpg') }}" alt="Mendoz Stomper">
+    <img src="{{ asset('assets/img/Products/flower2.webp') }}" alt="Mendoz Stomper">
 
     <div class="product-body">
       <h3>MENDOZ STOMPER</h3>
@@ -692,107 +812,176 @@
 
   </div>
 </div>
-      <!-- Oils -->
-      <div class="col-lg-4 col-md-6 product-item oil">
-        <div class="product-card">
-          <img src="assets/img/products/oil.jpg" alt="Cannabis Oils">
-          <div class="product-body">
-            <h3>Oils & Tinctures</h3>
-            <p>Clean, lab-tested oils for wellness and formulations.</p>
-            <a href="#contact" class="btn-buy">Buy / Enquire</a>
-          </div>
-        </div>
-      </div>
+     
+<div class="col-lg-4 col-md-6 product-item oil">
+  <div class="product-card">
 
-      <!-- Extracts -->
-      <div class="col-lg-4 col-md-6 product-item extract">
-        <div class="product-card">
-          <img src="assets/img/products/extract.jpg" alt="Cannabis Extracts">
-          <div class="product-body">
-            <h3>Concentrates & Extracts</h3>
-            <p>High-potency extracts with preserved terpene profiles.</p>
-            <a href="#contact" class="btn-buy">Buy / Enquire</a>
-          </div>
-        </div>
-      </div>
+    <img src="{{ asset('assets/img/Products/oil2.webp') }}" alt="Mendoz Stomper">
 
-        <!-- Extracts -->
-      <div class="col-lg-4 col-md-6 product-item extract">
-        <div class="product-card">
-          <img src="assets/img/products/extract.jpg" alt="Cannabis Extracts">
-          <div class="product-body">
-            <h3>Concentrates & Extracts</h3>
-            <p>High-potency extracts with preserved terpene profiles.</p>
-            <a href="#contact" class="btn-buy">Buy / Enquire</a>
-          </div>
-        </div>
-      </div>
+    <div class="product-body">
+      <h3>Banana Breeze Infused</h3>
+      <p>Hand-trimmed cannabis grown in certified organic environments.</p>
 
-        <!-- Extracts -->
-      <div class="col-lg-4 col-md-6 product-item extract">
-        <div class="product-card">
-          <img src="assets/img/products/extract.jpg" alt="Cannabis Extracts">
-          <div class="product-body">
-            <h3>Concentrates & Extracts</h3>
-            <p>High-potency extracts with preserved terpene profiles.</p>
-            <a href="#contact" class="btn-buy">Buy / Enquire</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Edibles -->
-      <div class="col-lg-4 col-md-6 product-item edible">
-        <div class="product-card">
-          <img src="assets/img/products/edible.jpg" alt="Cannabis Edibles">
-          <div class="product-body">
-            <h3>Edibles</h3>
-            <p>Precision-dosed edibles with consistent quality.</p>
-            <a href="#contact" class="btn-buy">Buy / Enquire</a>
-          </div>
-        </div>
-      </div>
-
-       <div class="col-lg-4 col-md-6 product-item edible">
-        <div class="product-card">
-          <img src="assets/img/products/edible.jpg" alt="Cannabis Edibles">
-          <div class="product-body">
-            <h3>Edibles</h3>
-            <p>Precision-dosed edibles with consistent quality.</p>
-            <a href="#contact" class="btn-buy">Buy / Enquire</a>
-          </div>
-        </div>
-      </div>
-
-       <!-- Edibles -->
-      <div class="col-lg-4 col-md-6 product-item edible">
-        <div class="product-card">
-          <img src="assets/img/products/edible.jpg" alt="Cannabis Edibles">
-          <div class="product-body">
-            <h3>Edibles</h3>
-            <p>Precision-dosed edibles with consistent quality.</p>
-            <a href="#contact" class="btn-buy">Buy / Enquire</a>
-          </div>
-        </div>
-      </div>
-
-       <div class="col-lg-4 col-md-6 product-item edible">
-        <div class="product-card">
-          <img src="assets/img/products/edible.jpg" alt="Cannabis Edibles">
-          <div class="product-body">
-            <h3>Edibles</h3>
-            <p>Precision-dosed edibles with consistent quality.</p>
-            <a href="#contact" class="btn-buy">Buy / Enquire</a>
-          </div>
-        </div>
-      </div>
-
+      <button 
+        class="btn-buy"
+        onclick="openProductModal(this)"
+        data-name="MENDOZ STOMPER"
+        data-type="INDICA DOMINANT"
+        data-image="{{ asset('assets/img/Products/flower2.jpg') }}"
+        data-thc="26-29% *"
+        data-cbd=".02% *"
+        data-terpenes="3.35% *"
+        data-description="The tight buds of Mendoz Stomper are light green with pastel accents, punctuated with ochre pistils. The outside of the flower is coated with a dense covering of trichomes which makes for some sticky handling. Each nug is packed with an over-powering sweet to floral aroma that leans towards its Mendo lineage. Expect to encounter a robust and zesty nose of musk and gassy/chemical-like fuel, with a sharp sweet and sour note that points to an intermingling of berry hints and citrus rind. The taste to smell translation is spot on with this one and the effects are quick to take hold."
+        data-breeder="Sunken Treasure Seeds"
+        data-genetics="Mendo Breath x Oz Kush x Mac Stomper"
+        data-aroma="Sweet, floral, musk, gas"
+        data-flavour="Sweet-sour, berry, citrus, fuel"
+        data-effects="Relaxing, calming, creative, happy, euphoric"
+      >
+        View Details
+      </button>
     </div>
+
+  </div>
+</div>
+
+<div class="col-lg-4 col-md-6 product-item extract">
+  <div class="product-card">
+
+    <img src="{{ asset('assets/img/Products/extracts-1.webp') }}" alt="Mendoz Stomper">
+
+    <div class="product-body">
+      <h3>Cuban Linx Shatter</h3>
+      <p>Hand-trimmed cannabis grown in certified organic environments.</p>
+
+      <button 
+        class="btn-buy"
+        onclick="openProductModal(this)"
+        data-name="MENDOZ STOMPER"
+        data-type="INDICA DOMINANT"
+        data-image="{{ asset('assets/img/Products/flower2.jpg') }}"
+        data-thc="26-29% *"
+        data-cbd=".02% *"
+        data-terpenes="3.35% *"
+        data-description="The tight buds of Mendoz Stomper are light green with pastel accents, punctuated with ochre pistils. The outside of the flower is coated with a dense covering of trichomes which makes for some sticky handling. Each nug is packed with an over-powering sweet to floral aroma that leans towards its Mendo lineage. Expect to encounter a robust and zesty nose of musk and gassy/chemical-like fuel, with a sharp sweet and sour note that points to an intermingling of berry hints and citrus rind. The taste to smell translation is spot on with this one and the effects are quick to take hold."
+        data-breeder="Sunken Treasure Seeds"
+        data-genetics="Mendo Breath x Oz Kush x Mac Stomper"
+        data-aroma="Sweet, floral, musk, gas"
+        data-flavour="Sweet-sour, berry, citrus, fuel"
+        data-effects="Relaxing, calming, creative, happy, euphoric"
+      >
+        View Details
+      </button>
+    </div>
+
+  </div>
+</div>
+
+  <div class="col-lg-4 col-md-6 product-item extract">
+  <div class="product-card">
+
+    <img src="{{ asset('assets/img/Products/extracts-2.webp') }}" alt="Mendoz Stomper">
+
+    <div class="product-body">
+      <h3>Cuban Linx Shatter</h3>
+      <p>Hand-trimmed cannabis grown in certified organic environments.</p>
+
+      <button 
+        class="btn-buy"
+        onclick="openProductModal(this)"
+        data-name="MENDOZ STOMPER"
+        data-type="INDICA DOMINANT"
+        data-image="{{ asset('assets/img/Products/flower2.jpg') }}"
+        data-thc="26-29% *"
+        data-cbd=".02% *"
+        data-terpenes="3.35% *"
+        data-description="The tight buds of Mendoz Stomper are light green with pastel accents, punctuated with ochre pistils. The outside of the flower is coated with a dense covering of trichomes which makes for some sticky handling. Each nug is packed with an over-powering sweet to floral aroma that leans towards its Mendo lineage. Expect to encounter a robust and zesty nose of musk and gassy/chemical-like fuel, with a sharp sweet and sour note that points to an intermingling of berry hints and citrus rind. The taste to smell translation is spot on with this one and the effects are quick to take hold."
+        data-breeder="Sunken Treasure Seeds"
+        data-genetics="Mendo Breath x Oz Kush x Mac Stomper"
+        data-aroma="Sweet, floral, musk, gas"
+        data-flavour="Sweet-sour, berry, citrus, fuel"
+        data-effects="Relaxing, calming, creative, happy, euphoric"
+      >
+        View Details
+      </button>
+    </div>
+
+  </div>
+</div>
+
+ <div class="col-lg-4 col-md-6 product-item edible">
+  <div class="product-card">
+
+    <img src="{{ asset('assets/img/Products/edibles-1.webp')}}" alt="Mendoz Stomper">
+
+    <div class="product-body">
+      <h3>Fully Blasted Peach Passionfruit</h3>
+      <p>Hand-trimmed cannabis grown in certified organic environments.</p>
+
+      <button 
+        class="btn-buy"
+        onclick="openProductModal(this)"
+        data-name="MENDOZ STOMPER"
+        data-type="INDICA DOMINANT"
+        data-image="{{ asset('assets/img/Products/flower2.jpg') }}"
+        data-thc="26-29% *"
+        data-cbd=".02% *"
+        data-terpenes="3.35% *"
+        data-description="The tight buds of Mendoz Stomper are light green with pastel accents, punctuated with ochre pistils. The outside of the flower is coated with a dense covering of trichomes which makes for some sticky handling. Each nug is packed with an over-powering sweet to floral aroma that leans towards its Mendo lineage. Expect to encounter a robust and zesty nose of musk and gassy/chemical-like fuel, with a sharp sweet and sour note that points to an intermingling of berry hints and citrus rind. The taste to smell translation is spot on with this one and the effects are quick to take hold."
+        data-breeder="Sunken Treasure Seeds"
+        data-genetics="Mendo Breath x Oz Kush x Mac Stomper"
+        data-aroma="Sweet, floral, musk, gas"
+        data-flavour="Sweet-sour, berry, citrus, fuel"
+        data-effects="Relaxing, calming, creative, happy, euphoric"
+      >
+        View Details
+      </button>
+    </div>
+
+  </div>
+</div>
+
+ <div class="col-lg-4 col-md-6 product-item edible">
+  <div class="product-card">
+
+    <img src="{{ asset('assets/img/Products/edibles-2.webp')}}" alt="Mendoz Stomper">
+
+    <div class="product-body">
+      <h3>Fully Blasted Peach Passionfruit</h3>
+      <p>Hand-trimmed cannabis grown in certified organic environments.</p>
+
+      <button 
+        class="btn-buy"
+        onclick="openProductModal(this)"
+        data-name="MENDOZ STOMPER"
+        data-type="INDICA DOMINANT"
+        data-image="{{ asset('assets/img/Products/flower2.jpg') }}"
+        data-thc="26-29% *"
+        data-cbd=".02% *"
+        data-terpenes="3.35% *"
+        data-description="The tight buds of Mendoz Stomper are light green with pastel accents, punctuated with ochre pistils. The outside of the flower is coated with a dense covering of trichomes which makes for some sticky handling. Each nug is packed with an over-powering sweet to floral aroma that leans towards its Mendo lineage. Expect to encounter a robust and zesty nose of musk and gassy/chemical-like fuel, with a sharp sweet and sour note that points to an intermingling of berry hints and citrus rind. The taste to smell translation is spot on with this one and the effects are quick to take hold."
+        data-breeder="Sunken Treasure Seeds"
+        data-genetics="Mendo Breath x Oz Kush x Mac Stomper"
+        data-aroma="Sweet, floral, musk, gas"
+        data-flavour="Sweet-sour, berry, citrus, fuel"
+        data-effects="Relaxing, calming, creative, happy, euphoric"
+      >
+        View Details
+      </button>
+    </div>
+
+  </div>
+</div>
+
+
+</div>
 
     
 
     <div class="text-center mt-5">
     <button id="loadMoreBtn" class="btn-view-more">
         View More Products
+         <i class="bi bi-chevron-down ms-2"></i>
     </button>
     </div>
 
