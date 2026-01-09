@@ -23,7 +23,7 @@
 <li><a href="{{ route('whitelabel') }}">White Label</a></li>
 <li><a href="{{ route('pricing') }}">Pricing</a></li>
 <li><a href="{{ route('orderinfo')}}">Order Info</a></li>
-<li><a href="">Contact</a></li>
+<li><a href="{{ route('contact') }}">Contact</a></li>
 </ul>
 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 </nav>
