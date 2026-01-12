@@ -38,7 +38,7 @@
         <a href="{{ route('products') }}" class="btn hero-btn hero-btn-primary">
           View Products
         </a>
-        <a href="#contact" class="btn hero-btn hero-btn-outline">
+        <a href="{{ route('contact') }}" class="btn hero-btn hero-btn-outline">
           Contact Us
         </a>
       </div>
@@ -59,7 +59,7 @@
         <a href="{{ route('products') }}" class="btn hero-btn hero-btn-primary">
           View Products
         </a>
-        <a href="#contact" class="btn hero-btn hero-btn-outline">
+        <a href="{{ route('contact') }}" class="btn hero-btn hero-btn-outline">
           Contact Us
         </a>
       </div>
@@ -77,7 +77,7 @@
         <a href="{{ route('products') }}" class="btn hero-btn hero-btn-primary">
           View Products
         </a>
-        <a href="#contact" class="btn hero-btn hero-btn-outline">
+        <a href="{{ route('contact') }}" class="btn hero-btn hero-btn-outline">
           Contact Us
         </a>
       </div>
@@ -95,7 +95,7 @@
         <a href="{{ route('products') }}" class="btn hero-btn hero-btn-primary">
           View Products
         </a>
-        <a href="#contact" class="btn hero-btn hero-btn-outline">
+        <a href="{{ route('contact') }}" class="btn hero-btn hero-btn-outline">
           Contact Us
         </a>
       </div>
@@ -386,7 +386,7 @@
       </div>
 
       <div class="col-lg-4 text-center text-lg-end">
-        <a href="#contact" class="btn btn-success cta-btn">
+        <a href="{{ route('contact') }}" class="btn btn-success cta-btn">
           Get White Label Pricing
           <i class="bi bi-arrow-right ms-2"></i>
         </a>
@@ -467,7 +467,7 @@
         </ul>
 
         <div class="d-flex flex-wrap gap-3 cta-buttons">
-        <a href="#contact" class="btn btn-cta-primary">
+        <a href="{{ route('contact') }}" class="btn btn-cta-primary">
           Contact Sales
         </a>
 

@@ -274,7 +274,7 @@
           <p>From cultivation to compliant packaging — launch faster and scale with confidence.</p>
         </div>
         <div class="col-lg-4 text-center text-lg-end">
-          <a href="#contact" class="btn btn-success wl-btn">
+          <a href="{{ route('contact') }}" class="btn btn-success wl-btn">
             Get White Label Pricing
             <i class="bi bi-arrow-right ms-2"></i>
           </a>

@@ -193,7 +193,7 @@ and documented chain-of-custody procedures to ensure consistency and trust.</p>
         </p>
 
         <!-- CTA Button -->
-        <a href="#contact" class="order-btn">
+        <a href="{{ route('contact') }}" class="order-btn">
           Start Your Order
           <i class="bi bi-arrow-right ms-2"></i>
         </a>
@@ -226,7 +226,7 @@ and documented chain-of-custody procedures to ensure consistency and trust.</p>
         </p>
 
         <!-- CTA Button -->
-        <a href="#contact" class="order-btn order-btn-outline">
+        <a href="{{ route('contact') }}" class="order-btn order-btn-outline">
           Request MOQ Details
           <i class="bi bi-info-circle ms-2"></i>
         </a>
@@ -251,7 +251,7 @@ and documented chain-of-custody procedures to ensure consistency and trust.</p>
         </p>
 
         <!-- CTA Button -->
-        <a href="#contact" class="order-btn">
+        <a href="{{ route('contact') }}" class="order-btn">
           Discuss Payment Options
           <i class="bi bi-credit-card ms-2"></i>
         </a>
@@ -286,7 +286,7 @@ and documented chain-of-custody procedures to ensure consistency and trust.</p>
         </p>
 
         <!-- CTA Button -->
-        <a href="#contact" class="order-btn">
+        <a href="{{ route('contact') }}" class="order-btn">
           Shipping Details
           <i class="bi bi-truck ms-2"></i>
         </a>
@@ -333,7 +333,7 @@ and documented chain-of-custody procedures to ensure consistency and trust.</p>
         </p>
 
         <!-- CTA Button -->
-        <a href="#contact" class="order-btn">
+        <a href="{{ route('contact') }}" class="order-btn">
           Contact Support
           <i class="bi bi-headset ms-2"></i>
         </a>

@@ -341,7 +341,7 @@
             <li><i class="bi bi-check-circle-fill"></i> Email & onboarding support</li>
             </ul>
 
-            <button class="btn-pricing" onclick="location.href='#contact'">
+            <button class="btn-pricing" onclick="location.href='{{ route('contact') }}'">
             Get Quote
             </button>
 
@@ -366,7 +366,7 @@
             <li><i class="bi bi-check-circle-fill"></i> Volume-based discounts</li>
             </ul>
 
-            <button class="btn-pricing" onclick="location.href='#contact'">
+            <button class="btn-pricing" onclick="location.href='{{ route('contact') }}'">
             Get Quote
             </button>
 
@@ -391,7 +391,7 @@
             <li><i class="bi bi-check-circle-fill"></i> Custom pricing & logistics</li>
             </ul>
 
-            <button class="btn-pricing" onclick="location.href='#contact'">
+            <button class="btn-pricing" onclick="location.href='{{ route('contact') }}'">
             Get Quote
             </button>
 

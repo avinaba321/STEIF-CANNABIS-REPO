@@ -1166,7 +1166,7 @@ function closeProductModal() {
           * THC, CBD and terpene values are averages based on lab tests.
         </p>
 
-        <a href="#contact" class="btn-enquire">Enquire Now</a>
+        <a href="{{ route('contact') }}" class="btn-enquire">Enquire Now</a>
       </div>
 
     </div>

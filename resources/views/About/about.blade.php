@@ -616,7 +616,7 @@
           <li><i class="bi bi-check-circle-fill"></i> Trusted white-label partnerships</li>
         </ul>
 
-        <a href="#contact" class="btn-story">Get in Touch</a>
+        <a href="{{ route('contact') }}" class="btn-story">Get in Touch</a>
       </div>
 
       <!-- Right Side Image Grid -->
@@ -678,7 +678,7 @@
           <li><i class="bi bi-check-circle-fill"></i> Long-term partner relationships</li>
         </ul>
 
-        <a href="#contact" class="btn-mission">
+        <a href="{{ route('contact') }}" class="btn-mission">
           Work With Us
         </a>
       </div>
@@ -722,7 +722,7 @@
           <li><i class="bi bi-check-circle-fill"></i> Long-term partner relationships</li>
         </ul>
 
-        <a href="#contact" class="btn-section">Work With Us</a>
+        <a href="{{ route('contact') }}" class="btn-section">Work With Us</a>
 
       </div>
 
